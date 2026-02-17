@@ -78,5 +78,23 @@
   "engines": {
     "node": ">=22",
     "npm": ">=10.9.2"
+  },
+  "quartz": {
+    "name": "reader-mode",
+    "displayName": "Reader Mode",
+    "category": "component",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultOrder": 50,
+    "defaultEnabled": true,
+    "defaultOptions": {},
+    "components": {
+      "ReaderMode": {
+        "displayName": "Reader Mode",
+        "defaultPosition": "left",
+        "defaultPriority": 35
+      }
+    }
   }
 }
