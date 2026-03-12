@@ -7,7 +7,7 @@ const emitReaderModeChangeEvent = (mode: "on" | "off") => {
   document.dispatchEvent(event);
 };
 
-document.addEventListener("nav", () => {
+const setupReaderMode = () => {
   const switchReaderMode = () => {
     isReaderMode = !isReaderMode;
     const newMode = isReaderMode ? "on" : "off";
@@ -22,4 +22,7 @@ document.addEventListener("nav", () => {
 
   // Set initial state
   document.documentElement.setAttribute("reader-mode", isReaderMode ? "on" : "off");
-});
+};
+
+document.addEventListener("nav", setupReaderMode);
+document.addEventListener("render", setupReaderMode);
