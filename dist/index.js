@@ -1,7 +1,9 @@
-import { classNames } from '@quartz-community/utils/lang';
 import { jsx, jsxs } from 'preact/jsx-runtime';
 
-// src/util/lang.ts
+// node_modules/@quartz-community/utils/dist/lang.js
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
 
 // src/i18n/locales/en-US.ts
 var en_US_default = {
@@ -12,9 +14,299 @@ var en_US_default = {
   }
 };
 
+// src/i18n/locales/ar-SA.ts
+var ar_SA_default = {
+  components: {
+    readerMode: {
+      title: "\u0648\u0636\u0639 \u0627\u0644\u0642\u0627\u0631\u0626"
+    }
+  }
+};
+
+// src/i18n/locales/ca-ES.ts
+var ca_ES_default = {
+  components: {
+    readerMode: {
+      title: "Mode lector"
+    }
+  }
+};
+
+// src/i18n/locales/cs-CZ.ts
+var cs_CZ_default = {
+  components: {
+    readerMode: {
+      title: "Re\u017Eim \u010Dte\u010Dky"
+    }
+  }
+};
+
+// src/i18n/locales/de-DE.ts
+var de_DE_default = {
+  components: {
+    readerMode: {
+      title: "Lesemodus"
+    }
+  }
+};
+
+// src/i18n/locales/en-GB.ts
+var en_GB_default = {
+  components: {
+    readerMode: {
+      title: "Reader mode"
+    }
+  }
+};
+
+// src/i18n/locales/es-ES.ts
+var es_ES_default = {
+  components: {
+    readerMode: {
+      title: "Modo lector"
+    }
+  }
+};
+
+// src/i18n/locales/fa-IR.ts
+var fa_IR_default = {
+  components: {
+    readerMode: {
+      title: "\u062D\u0627\u0644\u062A \u062E\u0648\u0627\u0646\u062F\u0646"
+    }
+  }
+};
+
+// src/i18n/locales/fi-FI.ts
+var fi_FI_default = {
+  components: {
+    readerMode: {
+      title: "Lukijatila"
+    }
+  }
+};
+
+// src/i18n/locales/fr-FR.ts
+var fr_FR_default = {
+  components: {
+    readerMode: {
+      title: "Mode lecture"
+    }
+  }
+};
+
+// src/i18n/locales/he-IL.ts
+var he_IL_default = {
+  components: {
+    readerMode: {
+      title: "\u05DE\u05E6\u05D1 \u05E7\u05E8\u05D9\u05D0\u05D4"
+    }
+  }
+};
+
+// src/i18n/locales/hu-HU.ts
+var hu_HU_default = {
+  components: {
+    readerMode: {
+      title: "Olvas\xF3 m\xF3d"
+    }
+  }
+};
+
+// src/i18n/locales/id-ID.ts
+var id_ID_default = {
+  components: {
+    readerMode: {
+      title: "Mode Pembaca"
+    }
+  }
+};
+
+// src/i18n/locales/it-IT.ts
+var it_IT_default = {
+  components: {
+    readerMode: {
+      title: "Modalit\xE0 lettura"
+    }
+  }
+};
+
+// src/i18n/locales/ja-JP.ts
+var ja_JP_default = {
+  components: {
+    readerMode: {
+      title: "\u30EA\u30FC\u30C0\u30FC\u30E2\u30FC\u30C9"
+    }
+  }
+};
+
+// src/i18n/locales/kk-KZ.ts
+var kk_KZ_default = {
+  components: {
+    readerMode: {
+      title: "\u041E\u049B\u0443 \u0440\u0435\u0436\u0438\u043C\u0456"
+    }
+  }
+};
+
+// src/i18n/locales/ko-KR.ts
+var ko_KR_default = {
+  components: {
+    readerMode: {
+      title: "\uB9AC\uB354 \uBAA8\uB4DC"
+    }
+  }
+};
+
+// src/i18n/locales/lt-LT.ts
+var lt_LT_default = {
+  components: {
+    readerMode: {
+      title: "Modalit\xE0 lettore"
+    }
+  }
+};
+
+// src/i18n/locales/nb-NO.ts
+var nb_NO_default = {
+  components: {
+    readerMode: {
+      title: "L\xE6semodus"
+    }
+  }
+};
+
+// src/i18n/locales/nl-NL.ts
+var nl_NL_default = {
+  components: {
+    readerMode: {
+      title: "Leesmodus"
+    }
+  }
+};
+
+// src/i18n/locales/pl-PL.ts
+var pl_PL_default = {
+  components: {
+    readerMode: {
+      title: "Tryb czytania"
+    }
+  }
+};
+
+// src/i18n/locales/pt-BR.ts
+var pt_BR_default = {
+  components: {
+    readerMode: {
+      title: "Modo leitor"
+    }
+  }
+};
+
+// src/i18n/locales/ro-RO.ts
+var ro_RO_default = {
+  components: {
+    readerMode: {
+      title: "Modul de citire"
+    }
+  }
+};
+
+// src/i18n/locales/ru-RU.ts
+var ru_RU_default = {
+  components: {
+    readerMode: {
+      title: "\u0420\u0435\u0436\u0438\u043C \u0447\u0442\u0435\u043D\u0438\u044F"
+    }
+  }
+};
+
+// src/i18n/locales/th-TH.ts
+var th_TH_default = {
+  components: {
+    readerMode: {
+      title: "\u0E42\u0E2B\u0E21\u0E14\u0E2D\u0E48\u0E32\u0E19"
+    }
+  }
+};
+
+// src/i18n/locales/tr-TR.ts
+var tr_TR_default = {
+  components: {
+    readerMode: {
+      title: "Okuma modu"
+    }
+  }
+};
+
+// src/i18n/locales/uk-UA.ts
+var uk_UA_default = {
+  components: {
+    readerMode: {
+      title: "\u0420\u0435\u0436\u0438\u043C \u0447\u0438\u0442\u0430\u043D\u043D\u044F"
+    }
+  }
+};
+
+// src/i18n/locales/vi-VN.ts
+var vi_VN_default = {
+  components: {
+    readerMode: {
+      title: "Ch\u1EBF \u0111\u1ED9 \u0111\u1ECDc"
+    }
+  }
+};
+
+// src/i18n/locales/zh-CN.ts
+var zh_CN_default = {
+  components: {
+    readerMode: {
+      title: "\u9605\u8BFB\u6A21\u5F0F"
+    }
+  }
+};
+
+// src/i18n/locales/zh-TW.ts
+var zh_TW_default = {
+  components: {
+    readerMode: {
+      title: "\u95B1\u8B80\u6A21\u5F0F"
+    }
+  }
+};
+
 // src/i18n/index.ts
 var locales = {
-  "en-US": en_US_default
+  "en-US": en_US_default,
+  "ar-SA": ar_SA_default,
+  "ca-ES": ca_ES_default,
+  "cs-CZ": cs_CZ_default,
+  "de-DE": de_DE_default,
+  "en-GB": en_GB_default,
+  "es-ES": es_ES_default,
+  "fa-IR": fa_IR_default,
+  "fi-FI": fi_FI_default,
+  "fr-FR": fr_FR_default,
+  "he-IL": he_IL_default,
+  "hu-HU": hu_HU_default,
+  "id-ID": id_ID_default,
+  "it-IT": it_IT_default,
+  "ja-JP": ja_JP_default,
+  "kk-KZ": kk_KZ_default,
+  "ko-KR": ko_KR_default,
+  "lt-LT": lt_LT_default,
+  "nb-NO": nb_NO_default,
+  "nl-NL": nl_NL_default,
+  "pl-PL": pl_PL_default,
+  "pt-BR": pt_BR_default,
+  "ro-RO": ro_RO_default,
+  "ru-RU": ru_RU_default,
+  "th-TH": th_TH_default,
+  "tr-TR": tr_TR_default,
+  "uk-UA": uk_UA_default,
+  "vi-VN": vi_VN_default,
+  "zh-CN": zh_CN_default,
+  "zh-TW": zh_TW_default
 };
 function i18n(locale) {
   return locales[locale] || en_US_default;
