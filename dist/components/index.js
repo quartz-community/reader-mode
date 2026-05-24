@@ -339,7 +339,7 @@ function u2(e2, t2, n2, o2, i2, u3) {
 // src/components/ReaderMode.tsx
 var ReaderMode = ({ displayClass, cfg }) => {
   const title = i18n(cfg?.locale ?? "en-US").components.readerMode.title;
-  return /* @__PURE__ */ u2("button", { class: classNames(displayClass, "readermode"), children: /* @__PURE__ */ u2(
+  return /* @__PURE__ */ u2("button", { class: classNames(displayClass, "readermode"), "aria-label": title, children: /* @__PURE__ */ u2(
     "svg",
     {
       xmlns: "http://www.w3.org/2000/svg",

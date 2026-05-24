@@ -12,7 +12,7 @@ import styles from "./styles/readermode.scss";
 const ReaderMode: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) => {
   const title = i18n(cfg?.locale ?? "en-US").components.readerMode.title;
   return (
-    <button class={classNames(displayClass, "readermode")}>
+    <button class={classNames(displayClass, "readermode")} aria-label={title}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
