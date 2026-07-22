@@ -1,2 +1,5 @@
-export { ReaderMode } from '../index.js';
-import '@quartz-community/types';
+import { QuartzComponent } from '@quartz-community/types';
+
+declare const _default: () => QuartzComponent;
+
+export { _default as ReaderMode };
