@@ -1,6 +1,6 @@
 {
   "name": "@quartz-community/reader-mode",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ReaderMode toggle component for Quartz - hides sidebars for focused reading",
   "type": "module",
   "license": "MIT",
