@@ -5,14 +5,16 @@ Adds a reader mode toggle button that hides sidebars for distraction-free readin
 ## Installation
 
 ```bash
-npx quartz plugin add github:quartz-community/reader-mode
+npx quartz plugin add @quartz-community/reader-mode
 ```
+
+Reader mode is already in Quartz's default configuration.
 
 ## Usage
 
 ```yaml title="quartz.config.yaml"
 plugins:
-  - source: github:quartz-community/reader-mode
+  - source: "@quartz-community/reader-mode"
     enabled: true
     layout:
       position: left
@@ -22,7 +24,7 @@ plugins:
 
 ## Configuration
 
-This plugin has no configuration options.
+This plugin has no configuration options. Use the entry's `enabled` field to turn it on or off, and `layout` to place the toggle button.
 
 ## Documentation
 
