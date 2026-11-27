@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.3
+
+### Patch Changes
+
+- c20cf8a: The reader mode button now toggles once per click after a page re-renders (for example after unlocking an encrypted page); previously each `render` event added another click listener, so a click could toggle twice and appear to do nothing.
+
 ## 1.0.2
 
 ### Patch Changes
