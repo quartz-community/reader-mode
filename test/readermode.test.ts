@@ -79,15 +79,32 @@ describe("reader mode script", () => {
     expect(dom.attributes.get("reader-mode")).toBe("off");
   });
 
-  // bug: set up on both `nav` and `render` without removing the previous click listener.
-  // encrypted-pages dispatches `render` after unlocking (and on later pages once a password is
-  // cached), so a click then toggles twice and the button does nothing until the next navigation.
-  it.fails("toggles once per click after a `render` event (encrypted page unlocked)", async () => {
+  // regression: set up on both `nav` and `render`; encrypted-pages dispatches `render` after
+  // unlocking. Each setup used to add another click listener, so a click toggled twice.
+  it("toggles once per click after a `render` event (encrypted page unlocked)", async () => {
     const dom = fakeDom({ buttonClass: "readermode" });
     runInline(script);
     dom.nav();
     dom.render();
     dom.click();
     expect(dom.attributes.get("reader-mode")).toBe("on");
+  });
+
+  it("keeps one click listener after a nav and two `render`s", async () => {
+    const dom = fakeDom({ buttonClass: "readermode" });
+    runInline(script);
+    dom.nav();
+    dom.render();
+    dom.render(); // three setups: an odd count would still end on "on", so count events
+    const modes: string[] = [];
+    dom.document.addEventListener("readermodechange", (e) =>
+      modes.push((e as CustomEvent<{ mode: string }>).detail.mode),
+    );
+    dom.click();
+    expect(dom.attributes.get("reader-mode")).toBe("on");
+    expect(modes).toEqual(["on"]);
+    dom.nav(); // cleanups still detach it: the next page has exactly one listener too
+    dom.click();
+    expect(modes).toEqual(["on", "off"]);
   });
 });
